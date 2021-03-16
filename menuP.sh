@@ -1,8 +1,17 @@
 #!/bin/bash
 opcion=$1
-opcionSub=""
-opcion3=""
-echo "Menú Metdologías"
+#opcionSub=""
+#opcion3=""
+#echo "Menú Metdologías"
+
+_menuChiquis(){
+    echo "Usted esta en la sección ${opcion}, seleccione la opción que desea utilizar."
+    echo "1. Agregar información"
+    echo "2. Buscar"
+    echo "3. Eliminar Información"
+    echo "4. Leer base de información"
+    read -p "selecciona una opcion: " opc2
+}
 
 _agile(){
     echo "Bienvenido a la guía rápida de Agile"
@@ -18,15 +27,19 @@ _agile(){
     case "$opcion" in
         1)
             echo "SCRUM"
+            _menuChiquis
         ;;
         2)
             echo "X.P"
+            _menuChiquis
         ;;
         3)
             echo "Kanban"
+            _menuChiquis
         ;;
         4)
             echo "Crystal"
+            _menuChiquis
         ;;
         *)
             echo "default"
@@ -48,12 +61,15 @@ _tradicionales(){
     case "$opcion" in
         1)
             echo "Cascada"
+            _menuChiquis
         ;;
         2)
             echo "Espiral"
+            _menuChiquis
         ;;
         3)
             echo "Modelo V"
+            _menuChiquis
         ;;
         *)
             echo "default"
@@ -62,8 +78,23 @@ _tradicionales(){
     
 }
 
+<<<<<<< HEAD
 if [ $opcion == "-a" ]; then
+=======
+if [ $# != 1 ]; then
+    echo "Error: faltan parametros"
+    exit 1
+fi
+
+if [ $opcion = "-a" ]; then
+>>>>>>> 6939ea88ebf4a3a7a55b302e6a059ec2d81e5e61
     _agile
 elif [ $opcion == "-t" ]; then
     _tradicionales
+<<<<<<< HEAD
+=======
+    # case $opcionSub in
+    #     SCRUM )
+    #     
+>>>>>>> 6939ea88ebf4a3a7a55b302e6a059ec2d81e5e61
 fi
