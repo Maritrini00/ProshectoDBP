@@ -52,7 +52,7 @@ _tradicionales(){
         2)
             echo "Espiral"
         ;;
-        2|3)
+        3)
             echo "Modelo V"
         ;;
         *)
@@ -61,6 +61,11 @@ _tradicionales(){
     esac
     
 }
+
+if [ $# != 1 ]; then
+    echo "Error: faltan parametros"
+    exit 1
+fi
 
 if [ $opcion = "-a" ]; then
     _agile
