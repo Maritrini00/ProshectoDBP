@@ -86,27 +86,7 @@ _agile(){
     echo
     read -p "selecciona una opcion: " opcion
 
-    case "$opcion" in
-        scrum)
-            # echo "SCRUM"
-            _menuChiquis
-        ;;
-        xp)
-            # echo "X.P"
-            _menuChiquis
-        ;;
-        kanban)
-            # echo "Kanban"
-            _menuChiquis
-        ;;
-        crystal)
-            # echo "Crystal"
-            _menuChiquis
-        ;;
-        *)
-            echo "default"
-        ;;
-    esac
+    _menuChiquis
     
 }
 
@@ -120,23 +100,7 @@ _tradicionales(){
     echo
     read -p "selecciona una opcion: " opcion
 
-    case "$opcion" in
-        cascada)
-            # echo "Cascada"
-            _menuChiquis
-        ;;
-        espiral)
-            # echo "Espiral"
-            _menuChiquis
-        ;;
-        modelov)
-            # echo "Modelo V"
-            _menuChiquis
-        ;;
-        *)
-            echo "default"
-        ;;
-    esac
+    _menuChiquis
     
 }
 
