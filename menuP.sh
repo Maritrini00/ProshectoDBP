@@ -18,26 +18,26 @@ _agile(){
     echo "Para continuar seleccione un tema"
     echo
     echo "  1. SCRUM"
-    echo "  2. X.P"
+    echo "  2. XP"
     echo "  3. Kanban"
     echo "  4. Crystal"
     echo
     read -p "selecciona una opcion: " opcion
 
     case "$opcion" in
-        1)
+        scrum)
             echo "SCRUM"
             _menuChiquis
         ;;
-        2)
+        xp)
             echo "X.P"
             _menuChiquis
         ;;
-        3)
+        kanban)
             echo "Kanban"
             _menuChiquis
         ;;
-        4)
+        crystal)
             echo "Crystal"
             _menuChiquis
         ;;
@@ -59,15 +59,15 @@ _tradicionales(){
     read -p "selecciona una opcion: " opcion
 
     case "$opcion" in
-        1)
+        cascada)
             echo "Cascada"
             _menuChiquis
         ;;
-        2)
+        espiral)
             echo "Espiral"
             _menuChiquis
         ;;
-        3)
+        modelov)
             echo "Modelo V"
             _menuChiquis
         ;;
