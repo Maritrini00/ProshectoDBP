@@ -1,8 +1,8 @@
 #!/bin/bash
 opcion=$1
-# opcionSub=""
-# opcion3=""
-# echo "Menú Metdologías"
+opcionSub=""
+opcion3=""
+echo "Menú Metdologías"
 
 _agile(){
     echo "Bienvenido a la guía rápida de Agile"
@@ -52,7 +52,7 @@ _tradicionales(){
         2)
             echo "Espiral"
         ;;
-        2|3)
+        3)
             echo "Modelo V"
         ;;
         *)
@@ -62,13 +62,8 @@ _tradicionales(){
     
 }
 
-if [ $opcion = "-a" ]; then
+if [ $opcion == "-a" ]; then
     _agile
-elif [ $opcion = "-t" ]; then
+elif [ $opcion == "-t" ]; then
     _tradicionales
-    # case $opcionSub in
-    #     SCRUM )
-    #     echo "Usted esta en la sección ${opcionSub}, seleccione la opción que desea utilizar."
-    #     echo "1. Agregar información"
-    #     echo ""
 fi
