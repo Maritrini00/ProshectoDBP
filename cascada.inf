@@ -1,0 +1,8 @@
+[Modelo].- proceso de desarrollo secuencial, en el que el desarrollo de software se concibe como  un conjunto de etapas que  se ejecutan una tras otra.
+[Requisitos].- En esta fase se hace un análisis de las necesidades del cliente para determinar las características del software a desarrollar, y se especifica todo lo que debe hacer el sistema sin entrar en detalles técnicos. 
+[Diseño].- En esta etapa se describe la estructura interna del software, y las relaciones entre las entidades que lo componen.
+[Implementación].- En esta fase se programan los requisitos especificados haciendo uso de las estructuras de datos diseñadas en la fase anterior.
+[Veirifación].- El objetivo de las pruebas es el de obtener información de la calidad del software, y sirven para: encontrar defectos o bugs, aumentar la calidad del software, refinar el código previamente escrito sin miedo a romperlo o introducir nuevos bugs.
+[Instalación].- Una vez se han desarrollado todas las funcionalidades del software y se ha comprobado que funcionan correctamente, se inicia la fase de instalación y mantenimiento. 
+[Ventajas].- El tiempo que se pasa en diseñar el producto en las primeras fases del proceso puede evitar problemas que serían más costosos cuando el proyecto ya estuviese en fase de desarrollo.
+[Desventajas].- Los diseñadores pueden no tener en cuenta todas las dificultades que se encontrarán cuando estén diseñando un software, lo que conllevará rediseñar el proyecto para solventar el problema.
