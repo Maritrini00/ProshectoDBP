@@ -78,23 +78,14 @@ _tradicionales(){
     
 }
 
-<<<<<<< HEAD
-if [ $opcion == "-a" ]; then
-=======
 if [ $# != 1 ]; then
-    echo "Error: faltan parametros"
-    exit 1
+	echo "Error: faltan parametros"
+	exit 1
 fi
 
-if [ $opcion = "-a" ]; then
->>>>>>> 6939ea88ebf4a3a7a55b302e6a059ec2d81e5e61
-    _agile
+if [ $opcion == "-a" ]; then
+	_agile
+
 elif [ $opcion == "-t" ]; then
     _tradicionales
-<<<<<<< HEAD
-=======
-    # case $opcionSub in
-    #     SCRUM )
-    #     
->>>>>>> 6939ea88ebf4a3a7a55b302e6a059ec2d81e5e61
 fi
