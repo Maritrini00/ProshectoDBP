@@ -9,3 +9,6 @@ Integrantes
 -Luis Humberto Izquierdo Morán 329630
 -Axel Rivas Guillen 329830
 -Maritrini Velázquez Ruiz 329675
+```
+## Advertencias
+Roncan pero no pueden con el pum pum pum.
