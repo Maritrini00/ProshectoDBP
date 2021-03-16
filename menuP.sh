@@ -4,19 +4,75 @@ opcion=$1
 #opcion3=""
 #echo "Menú Metdologías"
 
-_agregarInfo(){}
-_buscar(){}
-_leerBase(){}
-_eliminarInfo(){}
+# _agregarInfo(){}
+# _buscar(){}
+_leerBase(){
+    case "$opcion" in
+        scrum)
+        # echo "SCRUM"
+            cat scrum.inf
+        ;;
+        xp)
+            # echo "X.P"
+            cat xp.inf
+        ;;
+        kanban)
+            # echo "Kanban"
+            cat kanban.inf
+        ;;
+        crystal)
+            # echo "Crystal"
+            cat crystal.inf
+        ;;
+        cascada)
+            # echo "Cascada"
+            cat cascada.inf
+        ;;
+        espiral)
+            # echo "Espiral"
+            cat espiral.inf
+        ;;
+        modelov)
+            # echo "Modelo V"
+            cat modelov.inf
+        ;;
+        *)
+            echo "default"
+        ;;
+    esac
+    echo
+}
+# _eliminarInfo(){}
 
 
 _menuChiquis(){
+    echo
     echo "Usted esta en la sección ${opcion}, seleccione la opción que desea utilizar."
+    echo
     echo "1. Agregar información"
     echo "2. Buscar"
     echo "3. Eliminar Información"
     echo "4. Leer base de información"
+    echo
     read -p "selecciona una opcion: " opc2
+
+    case "$opc2" in
+        1)
+            _agregarInfo
+        ;;
+        2)
+            _buscar
+        ;;
+        3)
+            _eliminarInfo
+        ;;
+        4)
+            _leerBase
+        ;;
+        *)
+            echo "default"
+        ;;
+    esac
 }
 
 _agile(){
@@ -32,19 +88,19 @@ _agile(){
 
     case "$opcion" in
         scrum)
-            echo "SCRUM"
+            # echo "SCRUM"
             _menuChiquis
         ;;
         xp)
-            echo "X.P"
+            # echo "X.P"
             _menuChiquis
         ;;
         kanban)
-            echo "Kanban"
+            # echo "Kanban"
             _menuChiquis
         ;;
         crystal)
-            echo "Crystal"
+            # echo "Crystal"
             _menuChiquis
         ;;
         *)
@@ -66,15 +122,15 @@ _tradicionales(){
 
     case "$opcion" in
         cascada)
-            echo "Cascada"
+            # echo "Cascada"
             _menuChiquis
         ;;
         espiral)
-            echo "Espiral"
+            # echo "Espiral"
             _menuChiquis
         ;;
         modelov)
-            echo "Modelo V"
+            # echo "Modelo V"
             _menuChiquis
         ;;
         *)
