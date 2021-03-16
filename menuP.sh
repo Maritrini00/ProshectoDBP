@@ -4,6 +4,15 @@ opcion=$1
 # opcion3=""
 # echo "Menú Metdologías"
 
+_menuChiquis(){
+    echo "Usted esta en la sección ${opcion}, seleccione la opción que desea utilizar."
+    echo "1. Agregar información"
+    echo "2. Buscar"
+    echo "3. Eliminar Información"
+    echo "4. Leer base de información"
+    read -p "selecciona una opcion: " opc2
+}
+
 _agile(){
     echo "Bienvenido a la guía rápida de Agile"
     echo "Para continuar seleccione un tema"
@@ -18,15 +27,19 @@ _agile(){
     case "$opcion" in
         1)
             echo "SCRUM"
+            _menuChiquis
         ;;
         2)
             echo "X.P"
+            _menuChiquis
         ;;
         3)
             echo "Kanban"
+            _menuChiquis
         ;;
         4)
             echo "Crystal"
+            _menuChiquis
         ;;
         *)
             echo "default"
@@ -48,12 +61,15 @@ _tradicionales(){
     case "$opcion" in
         1)
             echo "Cascada"
+            _menuChiquis
         ;;
         2)
             echo "Espiral"
+            _menuChiquis
         ;;
         2|3)
             echo "Modelo V"
+            _menuChiquis
         ;;
         *)
             echo "default"
@@ -68,7 +84,5 @@ elif [ $opcion = "-t" ]; then
     _tradicionales
     # case $opcionSub in
     #     SCRUM )
-    #     echo "Usted esta en la sección ${opcionSub}, seleccione la opción que desea utilizar."
-    #     echo "1. Agregar información"
-    #     echo ""
+    #     
 fi
