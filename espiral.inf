@@ -1,0 +1,9 @@
+[Espiral].- Se utiliza con éxito en proyectos donde el coste de un fallo es un gran riesgo, de ahí que su principal aportación sea considerar la gestión de esos riesgos, algo que en los modelos anteriores ni siquiera se menciona.
+[Proyectos].- Habitualmente tiene sentido aplicar este método en proyectos grandes, largos, caros y complejos.
+[Ejecución].- el modelo en espiral consiste en seguir ciclos crecientes de cuatro fases cada uno, que se van realizando siguiendo una forma de espiral. 
+[Planificación].- Se determinan los objetivos y el alcance del ciclo que comienza, tras un necesario ejercicio de investigación.
+[Análisis].- Se evalúa todo aquello que pueda afectar al proyecto según el estado en que se encuentre y su grado de avance.
+[Implementación].-  Se desarrolla y valida el software según el alcance acordado, el cual está íntimamente relacionado y condicionado con el análisis de riesgos anterior.
+[Evaluación].- Antes de proceder a realizar otra vuelta en la espiral, se debe prestar atención a lo que sucedió en la vuelta anterior. 
+[Ventajas].- El desarrollo es iterativo y se pueden incorporar funcionalidades progresivamente.
+[Inconvenientes].- Fallos en el análisis de riesgos podría influir negativamente a todo el proyecto.
