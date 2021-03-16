@@ -4,6 +4,12 @@ opcion=$1
 #opcion3=""
 #echo "Menú Metdologías"
 
+_agregarInfo(){}
+_buscar(){}
+_leerBase(){}
+_eliminarInfo(){}
+
+
 _menuChiquis(){
     echo "Usted esta en la sección ${opcion}, seleccione la opción que desea utilizar."
     echo "1. Agregar información"
