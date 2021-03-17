@@ -5,33 +5,28 @@ opcion=$1
 #echo "Menú Metdologías"
 
 _agregarInfo(){
+    read -p "Que quieres agregar?: " texto
+
     case "$opcion" in
         scrum)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> scrum.inf
         ;;
         xp)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> xp.inf
         ;;
         kanban)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> kanban.inf
         ;;
         crystal)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> crystal.inf
         ;;
         cascada)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> cascada.inf
         ;;
         espiral)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> espiral.inf
         ;;
         modelov)
-            read -p "Que quieres agregar?: "texto
             echo $texto >> modelov.inf
         ;;
         *)
