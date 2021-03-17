@@ -1,0 +1,7 @@
+[ModeloV].- Define los procedimientos de gestión de la calidad que lo acompañan y describe cómo pueden interactuar estas fases individuales entre sí.
+[Especificaciones].- Al principio del proyecto, el modelo prevé un análisis de las especificaciones del sistema planificado.
+[Funcional].- El proyecto se completa después con requisitos funcionales y no funcionales para la arquitectura del sistema.
+[Diseño].- A esta fase le sigue el diseño del sistema, en el que se planifican los componentes y las interfaces de este.
+[Codificación].- Una vez completadas estas fases, se puede diseñar en detalle la arquitectura del software.
+[Verificación].- También llamadas de verificación o validación, que siempre están relacionadas con cada una de las fases de desarrollo. 
+[Tareas].- Pruebas de unidad, integración, integración del sistema y validación.
