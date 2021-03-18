@@ -214,10 +214,15 @@ _agile(){
     echo "  2. XP"
     echo "  3. Kanban"
     echo "  4. Crystal"
+    echo "  5. Ir a metodologias tradicionales"
     echo
     read -p "escribe la opcion (con letritas): " metod
 
-    _menuChiquis
+    if [ "$metod" == '5' ]; then
+    	_tradicionales
+    else
+    	_menuChiquis
+    fi
 }
 
 _tradicionales(){
@@ -227,10 +232,16 @@ _tradicionales(){
     echo "  1. Cascada"
     echo "  2. Espiral"
     echo "  3. Modelo V"
+    echo "  4. Ir a metodologias agiles"
     echo
-    read -p "escribe la opcion (con letritas): " metod
-
-    _menuChiquis
+    
+    read -p "escribe la opcion (con letritas, a menos que sea la opcion 4): " metod
+    
+    if [ "$metod" == '4' ]; then
+    	_agile
+    else
+    	_menuChiquis
+    fi
 }
 
 if [ $# != 1 ]; then
