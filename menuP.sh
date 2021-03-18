@@ -35,7 +35,44 @@ _agregarInfo(){
     esac
     echo
 }
-# _buscar(){}
+_buscar(){
+    read -p "Que estás buscando? " coso
+    case "$opcion" in
+    scrum)
+        # echo "SCRUM"
+            grep $coso scrum.inf
+
+        ;;
+        xp)
+            # echo "X.P"
+            grep $coso xp.inf
+        ;;
+        kanban)
+            # echo "Kanban"
+            grep $coso kanban.inf
+        ;;
+        crystal)
+            # echo "Crystal"
+            grep $coso crystal.inf
+        ;;
+        cascada)
+            # echo "Cascada"
+            grep $coso cascada.inf
+        ;;
+        espiral)
+            # echo "Espiral"
+            grep $coso espiral.inf
+        ;;
+        modelov)
+            # echo "Modelo V"
+            grep $coso modelov.inf
+        ;;
+        *)
+            echo "default"
+        ;;
+    esac
+    echo
+}
 _leerBase(){
     case "$opcion" in
         scrum)
