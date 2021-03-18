@@ -245,14 +245,12 @@ _tradicionales(){
 }
 
 if [ $# != 1 ]; then
-    echo
-	echo "Error: faltan parametros"
+	echo "Error: debes agregar un solo parametro"
 	exit 1
-fi
-
-if [ $opcion == "-a" ]; then
+elif [ $opcion == "-a" ]; then
 	_agile
-
 elif [ $opcion == "-t" ]; then
     _tradicionales
+else
+    echo "Error: parametro no valido"
 fi
