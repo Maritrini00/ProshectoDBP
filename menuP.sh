@@ -2,6 +2,7 @@
 opcion=$1
 
 _agregarInfo(){
+    echo
     read -p "Que quieres agregar?: " texto
 
     case "$opcion" in
@@ -34,6 +35,7 @@ _agregarInfo(){
 }
 
 _buscar(){
+    echo
     read -p "Que estás buscando? " coso
     case "$opcion" in
         scrum)
@@ -65,28 +67,29 @@ _buscar(){
 }
 
 _eliminarInfo(){
-    read -p "Que eliminamos jefe? pero escriba bien, respete mayúsculas y acentos pls: " coso
+    echo
+    read -p "Que eliminamos jefe? pero escriba bien, respete mayúsculas y acentos pls: " texto
     case "$opcion" in
         scrum)
-            sed -i '/$texto/d' ./scrum.inf
+            sed -i/$texto/d./scrum.inf
         ;;
         xp)
-            sed -i '/$texto/d' ./xp.inf
+            sed -i /$texto/d ./xp.inf
         ;;
         kanban)
-            sed -i '/$texto/d' ./kanban.inf
+            sed -i /$texto/d ./kanban.inf
         ;;
         crystal)
-            sed -i '/$texto/d' ./crystal.inf
+            sed -i /$texto/d ./crystal.inf
         ;;
         cascada)
-            sed -i '/$texto/d' ./cascada.inf
+            sed -i /$texto/d ./cascada.inf
         ;;
         espiral)
-            sed -i '/$texto/d' ./espiral.inf
+            sed -i /$texto/d ./espiral.inf
         ;;
         modelov)
-            sed -i '/$texto/d' ./modelov.inf
+            sed -i /$texto/d ./modelov.inf
         ;;
         *)
             echo "opcion no valida"
@@ -129,12 +132,12 @@ _menuChiquis(){
     echo
     echo "Usted esta en la sección ${opcion}, seleccione la opción que desea utilizar."
     echo
-    echo "1. Agregar información"
-    echo "2. Buscar"
-    echo "3. Eliminar Información"
-    echo "4. Leer base de información"
+    echo "  1. Agregar información"
+    echo "  2. Buscar"
+    echo "  3. Eliminar Información"
+    echo "  4. Leer base de información"
     echo
-    read -p "selecciona una opcion: " opc2
+    read -p "selecciona un numero: " opc2
 
     case "$opc2" in
         1)
@@ -164,7 +167,7 @@ _agile(){
     echo "  3. Kanban"
     echo "  4. Crystal"
     echo
-    read -p "selecciona una opcion: " opcion
+    read -p "escribe la opcion (con letritas): " opcion
 
     _menuChiquis
 }
@@ -177,12 +180,13 @@ _tradicionales(){
     echo "  2. Espiral"
     echo "  3. Modelo V"
     echo
-    read -p "selecciona una opcion: " opcion
+    read -p "escribe la opcion (con letritas): " opcion
 
     _menuChiquis
 }
 
 if [ $# != 1 ]; then
+    echo
 	echo "Error: faltan parametros"
 	exit 1
 fi
