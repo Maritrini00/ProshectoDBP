@@ -216,7 +216,7 @@ _agile(){
     echo "  4. Crystal"
     echo "  5. Ir a metodologias tradicionales"
     echo
-    read -p "escribe la opcion (con letritas): " metod
+    read -p "escribe la opcion (con letritas, a menos que sea la opcion 5): " metod
 
     if [ "$metod" == '5' ]; then
     	_tradicionales
