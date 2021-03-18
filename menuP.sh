@@ -1,8 +1,5 @@
 #!/bin/bash
 opcion=$1
-#opcionSub=""
-#opcion3=""
-#echo "Menú Metdologías"
 
 _agregarInfo(){
     read -p "Que quieres agregar?: " texto
@@ -30,87 +27,103 @@ _agregarInfo(){
             echo $texto >> modelov.inf
         ;;
         *)
-            echo "default"
+            echo "opcion no valida"
         ;;
     esac
     echo
 }
+
 _buscar(){
     read -p "Que estás buscando? " coso
     case "$opcion" in
-    scrum)
-        # echo "SCRUM"
+        scrum)
             grep $coso scrum.inf
-
         ;;
         xp)
-            # echo "X.P"
             grep $coso xp.inf
         ;;
         kanban)
-            # echo "Kanban"
             grep $coso kanban.inf
         ;;
         crystal)
-            # echo "Crystal"
             grep $coso crystal.inf
         ;;
         cascada)
-            # echo "Cascada"
             grep $coso cascada.inf
         ;;
         espiral)
-            # echo "Espiral"
             grep $coso espiral.inf
         ;;
         modelov)
-            # echo "Modelo V"
             grep $coso modelov.inf
         ;;
         *)
-            echo "default"
+            echo "opcion no valida"
         ;;
     esac
     echo
 }
+
+_eliminarInfo(){
+    read -p "Que eliminamos jefe? pero escriba bien, respete mayúsculas y acentos pls: " coso
+    case "$opcion" in
+        scrum)
+            sed -i '/$texto/d' ./scrum.inf
+        ;;
+        xp)
+            sed -i '/$texto/d' ./xp.inf
+        ;;
+        kanban)
+            sed -i '/$texto/d' ./kanban.inf
+        ;;
+        crystal)
+            sed -i '/$texto/d' ./crystal.inf
+        ;;
+        cascada)
+            sed -i '/$texto/d' ./cascada.inf
+        ;;
+        espiral)
+            sed -i '/$texto/d' ./espiral.inf
+        ;;
+        modelov)
+            sed -i '/$texto/d' ./modelov.inf
+        ;;
+        *)
+            echo "opcion no valida"
+        ;;
+    esac
+    echo
+}
+
 _leerBase(){
     case "$opcion" in
         scrum)
-        # echo "SCRUM"
             cat scrum.inf
         ;;
         xp)
-            # echo "X.P"
             cat xp.inf
         ;;
         kanban)
-            # echo "Kanban"
             cat kanban.inf
         ;;
         crystal)
-            # echo "Crystal"
             cat crystal.inf
         ;;
         cascada)
-            # echo "Cascada"
             cat cascada.inf
         ;;
         espiral)
-            # echo "Espiral"
             cat espiral.inf
         ;;
         modelov)
-            # echo "Modelo V"
             cat modelov.inf
         ;;
         *)
-            echo "default"
+            echo "opcion no valida"
         ;;
     esac
     echo
 }
-# _eliminarInfo(){}
-
 
 _menuChiquis(){
     echo
@@ -137,7 +150,7 @@ _menuChiquis(){
             _leerBase
         ;;
         *)
-            echo "default"
+            echo "opcion no valida"
         ;;
     esac
 }
@@ -154,7 +167,6 @@ _agile(){
     read -p "selecciona una opcion: " opcion
 
     _menuChiquis
-    
 }
 
 _tradicionales(){
@@ -168,7 +180,6 @@ _tradicionales(){
     read -p "selecciona una opcion: " opcion
 
     _menuChiquis
-    
 }
 
 if [ $# != 1 ]; then
