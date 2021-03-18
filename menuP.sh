@@ -71,7 +71,7 @@ _eliminarInfo(){
     read -p "Que eliminamos jefe? pero escriba bien, respete mayúsculas y acentos pls: " texto
     case "$opcion" in
         scrum)
-            sed -i/$texto/d./scrum.inf
+            sed -i /$texto/d ./scrum.inf
         ;;
         xp)
             sed -i /$texto/d ./xp.inf
